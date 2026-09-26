@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Steel Sourcing & Supply Chain Solutions</title>
+  <script src="https://tailwindcss.com"></script>
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-[#F8FAFC] text-[#0F172A] min-h-screen flex flex-col justify-between">
+
+  <!-- ================= 1. THANH MENU (NAVBAR CHO TRADING) ================= -->
+  <nav class="bg-[#0F172A] text-white border-b border-[#475569]/30 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center space-x-3">
+          <div class="bg-[#FF6B00] text-white font-bold p-2 rounded text-lg tracking-wider">METAL</div>
+          <span class="font-bold text-lg hidden sm:block tracking-tight">LINK GLOBAL SUPPLY</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-sm font-medium">
+          <a href="#" class="text-[#FF6B00] hover:text-white transition-colors">Home</a>
+          <a href="#" class="text-[#64748B] hover:text-white transition-colors">Sourcing Solutions</a>
+          <a href="#" class="text-[#64748B] hover:text-white transition-colors">Quality Assurance</a>
+          <a href="#" class="text-[#64748B] hover:text-white transition-colors">Global Logistics</a>
+        </div>
+        <div>
+          <a href="#rfq-section" class="bg-[#FF6B00] text-white px-4 py-2 rounded-md text-sm font-bold hover:bg-[#E05E00] transition-colors shadow-sm">
+            Submit RFQ
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ================= 2. NỘI DUNG CHÍNH (MAIN TRADING PORTAL) ================= -->
+  <main id="rfq-section" class="flex-grow py-12 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full space-y-8">
+    
+    <!-- KHỐI ĐỊNH VỊ NĂNG LỰC TRADING (Giúp tăng uy tín thương mại) -->
+    <div class="bg-white p-6 rounded-xl border border-[#475569]/10 shadow-sm grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+      <div class="p-4 border-b md:border-b-0 md:border-r border-[#475569]/10">
+        <div class="text-[#FF6B00] text-2xl font-bold mb-1">100+</div>
+        <div class="text-xs font-bold text-[#0F172A] uppercase">Certified Mills Network</div>
+        <div class="text-[#64748B] text-xs mt-1">Direct access to top steel manufacturers.</div>
+      </div>
+      <div class="p-4 border-b md:border-b-0 md:border-r border-[#475569]/10">
+        <div class="text-[#FF6B00] text-2xl font-bold mb-1">100%</div>
+        <div class="text-xs font-bold text-[#0F172A] uppercase">QC Inspection</div>
+        <div class="text-[#64748B] text-xs mt-1">Independent SGS/TUV testing & CO/CQ reports.</div>
+      </div>
+      <div class="p-4">
+        <div class="text-[#FF6B00] text-2xl font-bold mb-1">Global</div>
+        <div class="text-xs font-bold text-[#0F172A] uppercase">Door-to-Door Logistics</div>
+        <div class="text-[#64748B] text-xs mt-1">Full CIF, FOB, and DDP shipping management.</div>
+      </div>
+    </div>
+
+    <!-- FORM NHẬN YÊU CẦU ĐẶT HÀNG TỪ KHÁCH NƯỚC NGOÀI -->
+    <div class="bg-white rounded-xl shadow-md border border-[#475569]/10 overflow-hidden">
+      <div class="bg-[#0F172A] p-6 text-white border-b border-[#475569]/30">
+        <div class="flex items-center space-x-2 text-[#FF6B00] text-xs font-semibold uppercase tracking-widest mb-1">
+          <span>●</span> <span>Global B2B Procurement</span>
+        </div>
+        <h1 class="text-2xl font-bold tracking-tight">Request For Quote & Sourcing</h1>
+        <p class="text-[#64748B] text-xs mt-1">Tell us what you need. Our commercial and engineering experts will match your requirements with the best manufacturers, negotiate prices, and send a complete quote.</p>
+      </div>
+
+      <form class="p-6 sm:p-8 space-y-6" onsubmit="handleFormSubmit(event)">
+        <!-- Section 1 -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-[#475569] mb-3 pb-1 border-b border-[#475569]/20">1. Buyer Information</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-[#0F172A] mb-1">Company Name *</label>
+              <input type="text" required placeholder="e.g., European Builders NV" class="w-full text-sm px-3 py-2 border border-[#475569]/30 rounded-md focus:outline-none focus:border-[#FF6B00]">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#0F172A] mb-1">Contact Person *</label>
+              <input type="text" required placeholder="e.g., Hans Müller" class="w-full text-sm px-3 py-2 border border-[#475569]/30 rounded-md focus:outline-none focus:border-[#FF6B00]">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#0F172A] mb-1">Corporate Email *</label>
+              <input type="email" required placeholder="buyer@company.com" class="w-full text-sm px-3 py-2 border border-[#475569]/30 rounded-md focus:outline-none focus:border-[#FF6B00]">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#0F172A] mb-1">Destination Country / Port *</label>
+              <input type="text" required placeholder="e.g., Port of Rotterdam, Netherlands" class="w-full text-sm px-3 py-2 border border-[#475569]/30 rounded-md focus:outline-none focus:border-[#FF6B00]">
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-[#475569] mb-3 pb-1 border-b border-[#475569]/20">2. Procurement & Fabrication Requirements</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-[#0F172A] mb-1">Material / Product Type *</label>
+              <select class="w-full text-sm px-3 py-2 bg-white border border-[#475569]/30 rounded-md focus:outline-none focus:border-[#FF6B00]">
+                <option>Custom Machined Components</option>
+                <option>Structural Steel (Beams/Pipes)</option>
+                <option>Steel Coils / Plates</option>
+                <option>Forged & Cast Metal Parts</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#0F172A] mb-1">Incoterms Required *</label>
+              <select class="w-full text-sm px-3 py-2 bg-white border border-[#475569]/30 rounded-md focus:outline-none focus:border-[#FF6B00]">
+                <option>FOB (Free On Board)</option>
+                <option>CIF (Cost, Insurance & Freight)</option>
+                <option>DDP (Delivered Duty Paid)</option>
+                <option>EXW (Ex Works)</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-[#0F172A] mb-1">Estimated Volume (Tons/Pcs) *</label>
+              <input type="text" required placeholder="e.g., 25 Tons or 5,000 Pcs" class="w-full text-sm px-3 py-2 border border-[#475569]/30 rounded-md focus:outline-none focus:border-[#FF6B00]">
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-[#475569] mb-3 pb-1 border-b border-[#475569]/20">3. Technical Specifications & Drawings</h2>
+          <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-[#475569]/30 border-dashed rounded-md bg-[#F8FAFC] hover:border-[#FF6B00] transition-colors relative cursor-pointer">
+            <div class="space-y-1 text-center">
+              <svg class="mx-auto h-10 w-10 text-[#64748B]" stroke="currentColor" fill="none" viewBox="0 0 48 48">
+                <path d="M28 8H12a4 4 0 00-4 4v20a4 4 0 004 4h24a4 4 0 004-4V20m-12-4h12m0 0v-8m0 8l-8-8-8 8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <div class="flex text-sm text-[#475569] justify-center">
+                <label class="relative font-semibold text-[#FF6B00] hover:underline cursor-pointer">
+                  <span>Upload Bill of Materials (BOM) or CAD Drawings</span>
+                  <input type="file" id="fileInput" class="sr-only" required>
+                </label>
+              </div>
+              <p class="text-xs text-[#64748B]">Formats: .PDF, .XLSX, .DWG, .STEP (Max 50MB)</p>
+              <div id="fileNameDisplay" class="mt-2"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <button type="submit" class="w-full bg-[#FF6B00] text-white font-bold py-3 px-4 rounded-md shadow-sm hover:bg-[#E05E00] transition-colors flex items-center justify-center space-x-2 text-base">
+            <span>Inquire Best Factory Price</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- ================= 4. FOOTER CHO TRADING ================= -->
+  <footer class="bg-[#0F172A] text-[#64748B] text-xs py-6 border-t border-[#475569]/20">
+    <div class="max-w-7xl mx-auto px-4 text-center space-y-2">
+      <p class="text-white font-medium">© 2026 MetalLink Global Supply Chain. All rights reserved.</p>
+      <p>Independent Quality Inspections | Strict Compliance to ASTM, EN, JIS Standards | Global Trade Risk Management</p>
+    </div>
+  </footer>
+
+  <!-- ================= 5. LOGIC HIỂN THỊ FILE TRẮNG VIỀN XANH ================= -->
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const fileNameDisplay = document.getElementById('fileNameDisplay');
+
